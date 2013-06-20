@@ -16,6 +16,11 @@ module Lims::BridgeApp
         def self.sample(sample_hash, options)
           sample = Lims::ManagementApp::Sample.new
           sample_hash.each do |k,v|
+            # we use sanger_sample_id for the name of sample in Sequencescape
+            # It can only contains: letters, number, '_' or '-'
+            if k == "sanger_sample_id"
+              v.delete!("^a-zA-Z0-9_-")
+            end
             sample.send("#{k}=", v) if sample.respond_to?("#{k}=")
           end
 
