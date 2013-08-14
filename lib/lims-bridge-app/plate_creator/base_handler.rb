@@ -31,8 +31,12 @@ module Lims::BridgeApp::PlateCreator
             @log = log
             @metadata = metadata
             @s2_resource = s2_resource
+            @settings = get_settings
           end
         end
+      end
+
+      def get_settings
       end
 
       def _call_in_transaction

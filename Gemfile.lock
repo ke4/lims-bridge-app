@@ -15,13 +15,6 @@ GIT
       virtus (= 0.2.0)
 
 GIT
-  remote: http://github.com/sanger/lims-laboratory-app.git
-  revision: 9f700ad637346bd95aa22cdb92e6842a64814efc
-  branch: uat
-  specs:
-    lims-laboratory-app (2.5.0.pre)
-
-GIT
   remote: http://github.com/sanger/psd_logger.git
   revision: dd2d634114df75b1d8535715c169a7fc99521389
   specs:
@@ -40,10 +33,10 @@ GIT
 
 GIT
   remote: https://github.com/sanger/lims-management-app.git
-  revision: d7144808c9cfe386e278bdddeab3034c3871e349
+  revision: 58fcf8a43783ba182f767540fec3d4823c5e7e39
   branch: uat
   specs:
-    lims-management-app (1.7.0.rc1)
+    lims-management-app (1.8.0.rc1)
       bunny (= 0.9.0.pre10)
       json
 
@@ -57,6 +50,11 @@ PATH
       mysql2
       sequel
       virtus
+
+PATH
+  remote: ../lims-laboratory-app
+  specs:
+    lims-laboratory-app (2.5.1.pre)
 
 GEM
   remote: http://www.rubygems.org/
@@ -131,7 +129,7 @@ DEPENDENCIES
   lims-busclient (~> 0.4.0.rc1)!
   lims-core (~> 2.5.0.pre)!
   lims-laboratory-app (~> 2.5.0.pre)!
-  lims-management-app (~> 1.7.0.rc1)!
+  lims-management-app (~> 1.8.0.rc1)!
   psd_logger!
   rake
   rspec (~> 2.8.0)
